@@ -12,7 +12,7 @@ For details, please contact the organizers, William Denton <wdenton@yorku.ca> (W
 
 ## Background
 
-This project is based on a [JISC](http://www.jisc.ac.uk/) project called [MOSAIC (Making Our Shared Activity Information Count)](http://sero.co.uk/jisc-mosaic-documents.html). The documents there describe what they did, and our plan is based on that:
+We plan to implement in Ontario something close to the [JISC](http://www.jisc.ac.uk/) project called [MOSAIC (Making Our Shared Activity Information Count)](http://sero.co.uk/jisc-mosaic-documents.html). The documents there describe what they did, and our plan is based on that.
 
 * [MOSAIC Data Collection: A Guide](http://sero.co.uk/assets/090514%20MOSAIC%20data%20collection%20-%20A%20guide%20v01.pdf)
 * [MOSAIC Final Report](http://sero.co.uk/mosaic/100322_MOSAIC_Final_Report_v7_FINAL.pdf) (and [Appendices](http://sero.co.uk/mosaic/100212%20MOSAIC%20Final%20Report%20Appendices%20FINAL.pdf))
@@ -20,13 +20,19 @@ This project is based on a [JISC](http://www.jisc.ac.uk/) project called [MOSAIC
 the Recommendation Engine idea, but are worth looking at to see other 
 possible future directions.)
 
+The [JISC MOSAIC wiki](http://library.hud.ac.uk/wikis/mosaic/index.php/Main_Page) has code and data examples.
+
 The JISC project grew out of work done by Dave Pattern (Library Systems Manager) and others at the University of Huddersfield. They made usage data available under an Open Data Commons License.
 
 * [Data](http://library.hud.ac.uk/data/usagedata/)
 * [README](http://library.hud.ac.uk/data/usagedata/_readme.html)
 * Pattern explains things in [Free book usage data from the University of Huddersfield](http://www.daveyp.com/blog/archives/528)
 
+In March 2011 Dave Pattern's summarized it all in [Sliding Down the Long Tail](http://www.daveyp.com/blog/archives/1453).
+
 # Data gathering
+
+Scholars Portal will aggregate the data from the different libraries, and make the (anonymous) results openly available.
 
 ## Data levels
 
@@ -66,76 +72,20 @@ MOSAIC set out three levels of usage data in the [Final Report](http://sero.co.u
 
 We would collect use data at Level 0.
 
-## Data extraction
+## Data collection
 
-Scholars Portal will give template XML files, with instructions, to member libraries, who will pull the necessary data from their systems. Because there are several different ILSes involved, the necessary database or report commands will vary, but once done for one ILS they can be shared with other users of the same system.
+We will make it as easy as possible for member libraries to pull the data from their systems. Because there are several different ILSes involved, the necessary database or report commands will vary, but once done for one ILS they can be shared with other users of the same system. MOSAIC's [existing code for SirsiDynix Horizon](http://library.hud.ac.uk/wikis/mosaic/index.php/Code_for_SirsiDynix_Horizon) may be useful.
 
-!!! TODO Expand with actual examples
+We will use two of the kinds of data files described in the [MOSAIC data file formats](http://library.hud.ac.uk/data/MOSAIC/scripts/_readme.html):
 
-## Data formats
+* `items.txt`
+* `transaction.YYYY.txt`
 
-Following the MOSAIC lead (as described in the [README](http://library.hud.ac.uk/data/usagedata/_readme.html) from their [script repository](http://library.hud.ac.uk/data/usagedata/)), we will collect item file and yearly transaction files from libraries.
+Because we are working at Level 0 and not connecting users and courses, we don't need `users.YYYY.txt` or `courses.txt`.
 
-All files are stored with tab-separated values.
+Then we can use [data2xml.pl](http://library.hud.ac.uk/data/MOSAIC/scripts/data2xml.txt) (or a variation) to convert the library-generated data into richer XML that we will use for the work, as describe in the [usage data README](http://library.hud.ac.uk/data/usagedata/_readme.html) from their [script repository](http://library.hud.ac.uk/data/usagedata/)).
 
-### Item file: items.txt
-
-FIELDS:
-
-* item ID
-* ISBN(s)
-* title
-* author(s)
-* publisher
-* publication year
-* persistent URL
-
-SAMPLE:
-
-    123  0415972531  Music & copyright  L. Marshall  Wiley    2004 http://libcat.hud.ac.uk/123
-    234  0415969298  Songwriting tips   N. Skilbeck  Phaidon  1997 http://libcat.hud.ac.uk/234
-
-* The item ID is whatever ID you want to use to identify a library book. It must match the item ID contained in the item file.
-* The ISBN(s) are one (or more) ISBNs, separated by a | pipe character where more than one ISBN is linked to the item (e.g. 0415966744|0415966752).
-* The title is the title of the book.
-* The author(s) are one (or more) names, separated by a | pipe character where more than one name is present (e.g. John Smith|Julie Johnson).
-* The publisher and publication year are the name of the publishing company and the year of publication.
-* The persistent URL is the web address the item can be found at (e.g. on your library catalogue).
-
-### Transaction files: transaction.YYYY.txt
-
-FIELDS:
-
-* timestamp
-* item ID
-* user ID
-
-SAMPLE:
-
-     1222646400    114784    67890
-     1225756800    103828    67890
-     1225756800    62580     76543
-
-* The timestamp is in Unix time format (i.e. the number of seconds since 1st Jan 1970 UTC). It is used to calculate the day the transaction occurred on.
-* The user ID is whatever ID you want to use to identify an individual library user. It will be converted to a MD5 hash value before the data is submitted to MOSAIC. It must match the user ID contained in the user file.
-* The item ID is whatever ID you want to use to identify a library book. It must match the item ID contained in the item file.
-
-The basic usage data to be gathered is:
-
-* Item title
-* ISBN
-* Number of copies
-* URL of item in catalogue
-* Loan history, giving number of initial circulations per year over the last 10 years (or fewer, if 10 years of data is not available)
-
-The basic also-borrowed data to be gathered for each item (A) is a list of other items (B) that shows:
-
-* how many times A was borrowed before B
-* how many times A and B were borrowed together
-* how many times A was borrowed after B
-* how many times B was borrowed in total
-
-Scholars Portal will aggregate the data from the different libraries, and make the data openly available.
+## Data as XML
 
 # Privacy
 
@@ -152,13 +102,13 @@ The data will be stored using the same format as Huddersfield used in their data
 
 !!!! TODO Expand
 
-# Recommendation Engine
+# Building the recommendation Engine
 
-!!! TODO Write up what is known about how this can work, from MOSAIC and what Tim Spalding said
+The purpose of the hackfest is to build the code to make the recommendation engine work. When the Recommendation Engine is given an ISBN or other ID number it will suggest a list of related items.
 
-When the Recommendation Engine is given an ISBN or other ID number it will suggest a list of related items, using an algorithm based on the also-borrowed data and the usage data.
+Pattern's [Sliding Down the Long Tail](http://www.daveyp.com/blog/archives/1453) describes the logic we'll need to follow.
 
-[suggest algorithm? Also use LibraryThing data? We can get it from Tim Spalding.]
+Tim Spalding implemented a similar feature at [LibraryThing](http://librarything.com/). When asked on Twitter how it worked, he said [The best code is just statistics](https://mobile.twitter.com/librarythingtim/status/126478695828434944) and [Given random distribution how many of book X would you expect? How many did you find?](https://mobile.twitter.com/librarythingtim/status/126480811817046016).
 
 # Implementation as a web service
 
