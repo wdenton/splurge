@@ -4,9 +4,9 @@
 
 Collect usage data from OCUL members and build a recommendation engine that can be integrated into any members catalogue. Make the anonymized data available under an open license so members and others can better assess and understand collection usage in Ontario, and make the software available under the GNU Public License so anyone can use it.
 
-## Hackfest
+## Hackfest on Friday 17 February 2012 at Ryerson University
 
-There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seventh floor of Heaslip House at Ryerson University.  It is open to 
+There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seventh floor of Heaslip House at Ryerson University.  It is open to anyone in an [OCUL](http://www.ocul.on.ca/) library.  Anyone who's in Toronto the evening before is welcome to come for dinner at a pub.
 
 For details, please contact the organizers, William Denton <wdenton@yorku.ca> (Web Librarian, York University) and Cameron Metcalf <cmetcalf@uottawa.ca> (Head, Library Systems Division, University of Ottawa).
 
@@ -85,12 +85,6 @@ Because we are working at Level 0 and not connecting users and courses, we don't
 
 Then we can use [data2xml.pl](http://library.hud.ac.uk/data/MOSAIC/scripts/data2xml.txt) (or a variation) to convert the library-generated data into richer XML that we will use for the work, as describe in the [usage data README](http://library.hud.ac.uk/data/usagedata/_readme.html) from their [script repository](http://library.hud.ac.uk/data/usagedata/)).
 
-## Data as XML
-
-# Privacy
-
-No identifying information will be connected to the usage data. It is completely anonymous.
-
 # Data storage
 
 The data will be stored as XML using the same format as Huddersfield used in their data release (see the [usage data README](http://library.hud.ac.uk/data/usagedata/_readme.html)):
@@ -109,4 +103,9 @@ Tim Spalding implemented a similar feature at [LibraryThing](http://librarything
 # Implementation as a web service
 
 The Recommendation Engine will have web-based API available at Scholars Portal. Ideally a library will be able to insert one line of Javascript into its HTML template to make the recommendations appear.
+
+# Privacy
+
+No identifying information will be connected to the usage data. It is completely anonymous.
+
 
