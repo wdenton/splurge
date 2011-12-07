@@ -82,18 +82,18 @@ Following the MOSAIC lead (as described in the README from their script reposito
 
 FIELDS:
 
-  item ID
-  ISBN(s)
-  title
-  author(s)
-  publisher
-  publication year
-  persistent URL
+* item ID
+* ISBN(s)
+* title
+* author(s)
+* publisher
+* publication year
+* persistent URL
 
 SAMPLE:
 
-123  0415972531  Music & copyright  L. Marshall  Wiley    2004 http://libcat.hud.ac.uk/123
-234  0415969298  Songwriting tips   N. Skilbeck  Phaidon  1997 http://libcat.hud.ac.uk/234
+    123  0415972531  Music & copyright  L. Marshall  Wiley    2004 http://libcat.hud.ac.uk/123
+    234  0415969298  Songwriting tips   N. Skilbeck  Phaidon  1997 http://libcat.hud.ac.uk/234
 
 * The item ID is whatever ID you want to use to identify a library book. It must match the item ID contained in the item file.
 * The ISBN(s) are one (or more) ISBNs, separated by a | pipe character where more than one ISBN is linked to the item (e.g. 0415966744|0415966752).
@@ -106,15 +106,15 @@ SAMPLE:
 
 FIELDS:
 
-  timestamp
-  item ID
-  user ID
+* timestamp
+* item ID
+* user ID
 
 SAMPLE:
 
-     1222646400    114784    67890
-     1225756800    103828    67890
-     1225756800    62580     76543
+     1222646400 114784 67890
+     1225756800 103828 67890
+     1225756800 62580 76543
 
 * The timestamp is in Unix time format (i.e. the number of seconds since 1st Jan 1970 UTC). It is used to calculate the day the transaction occurred on.
 * The user ID is whatever ID you want to use to identify an individual library user. It will be converted to a MD5 hash value before the data is submitted to MOSAIC. It must match the user ID contained in the user file.
@@ -122,13 +122,11 @@ SAMPLE:
 
 The basic usage data to be gathered is:
 
-  Item title
-  ISBN
-  Number of copies
-  URL of item in catalogue
-  Loan history, giving number of initial circulations per year over 
-  
-the last 10 years (or fewer, if 10 years of data is not available)
+* Item title
+* ISBN
+* Number of copies
+* URL of item in catalogue
+* Loan history, giving number of initial circulations per year over the last 10 years (or fewer, if 10 years of data is not available)
 
 The basic also-borrowed data to be gathered for each item (A) is a list of other items (B) that shows:
 
