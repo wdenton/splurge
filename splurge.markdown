@@ -6,13 +6,13 @@ Collect usage data from OCUL members and build a recommendation engine that can 
 
 ## Hackfest
 
-There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seventh floor of Heaslip House at Ryerson University.
+There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seventh floor of Heaslip House at Ryerson University.  It is open to 
 
 For details, please contact the organizers, William Denton <wdenton@yorku.ca> (Web Librarian, York University) and Cameron Metcalf <cmetcalf@uottawa.ca> (Head, Library Systems Division, University of Ottawa).
 
 # Background
 
-This project is based on a British project at JISC called [MOSAIC (Making Our Shared Activity Information Count)](http://sero.co.uk/jisc-mosaic-documents.html). The documents there include:
+This project is based on a British project at JISC called [MOSAIC (Making Our Shared Activity Information Count)](http://sero.co.uk/jisc-mosaic-documents.html). The documents there describe what they did and what we want to do:
 
 * [MOSAIC Data Collection: A Guide](http://sero.co.uk/assets/090514%20MOSAIC%20data%20collection%20-%20A%20guide%20v01.pdf)
 * [MOSAIC Final Report](http://sero.co.uk/mosaic/100322_MOSAIC_Final_Report_v7_FINAL.pdf) (and [Appendices](http://sero.co.uk/mosaic/100212%20MOSAIC%20Final%20Report%20Appendices%20FINAL.pdf))
@@ -20,9 +20,7 @@ This project is based on a British project at JISC called [MOSAIC (Making Our Sh
 the Recommendation Engine idea, but are worth looking at to see other 
 possible future directions.)
 
-The JISC project grew out of work done by Dave Pattern and others at the 
-University of Huddersfield. They made usage data available under an Open 
-Data Commons License.
+The JISC project grew out of work done by Dave Pattern and others at the University of Huddersfield. They made usage data available under an Open Data Commons License.
 
 * [Data](http://library.hud.ac.uk/data/usagedata/)
 * [README](http://library.hud.ac.uk/data/usagedata/_readme.html)
@@ -66,7 +64,7 @@ MOSAIC set out three levels of usage data in the [Final Report](http://sero.co.u
 </tbody>
 </table>
 
-This project would collect use data at Level 0.
+We would collect use data at Level 0.
 
 ## Data extraction
 
@@ -76,7 +74,9 @@ Scholars Portal will give template XML files, with instructions, to member libra
 
 ## Data formats
 
-Following the MOSAIC lead (as described in the README from their script repository), we will collect item file and yearly transaction files from libraries.
+Following the MOSAIC lead (as described in the [README](http://library.hud.ac.uk/data/usagedata/_readme.html) from their [script repository](http://library.hud.ac.uk/data/usagedata/)), we will collect item file and yearly transaction files from libraries.
+
+All files are stored with tab-separated values.
 
 ### Item file: items.txt
 
@@ -112,9 +112,9 @@ FIELDS:
 
 SAMPLE:
 
-     1222646400 114784 67890
-     1225756800 103828 67890
-     1225756800 62580 76543
+     1222646400    114784    67890
+     1225756800    103828    67890
+     1225756800    62580     76543
 
 * The timestamp is in Unix time format (i.e. the number of seconds since 1st Jan 1970 UTC). It is used to calculate the day the transaction occurred on.
 * The user ID is whatever ID you want to use to identify an individual library user. It will be converted to a MD5 hash value before the data is submitted to MOSAIC. It must match the user ID contained in the user file.
