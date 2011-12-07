@@ -1,10 +1,14 @@
-# Goal
+# SPLURGE: Scholars Portal Library Usage-based Recommendation Engine
 
-Collect usage data from OCUL members and build a recommendation engine 
-that can be integrated into any members catalogue. Make the anonymized 
-data available under an open license so members and others can better 
-assess and understand collection usage in Ontario, and make the software 
-available under the GNU Public License so anyone can use it.
+## Goal
+
+Collect usage data from OCUL members and build a recommendation engine that can be integrated into any members catalogue. Make the anonymized data available under an open license so members and others can better assess and understand collection usage in Ontario, and make the software available under the GNU Public License so anyone can use it.
+
+## Hackfest
+
+There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seventh floor of Heaslip House at Ryerson University.
+
+For details, please contact the organizers, William Denton <wdenton@yorku.ca> (Web Librarian, York University) and Cameron Metcalf <cmetcalf@uottawa.ca> (Head, Library Systems Division, University of Ottawa).
 
 # Background
 
@@ -44,22 +48,23 @@ MOSAIC set out three levels of usage data in the [Final Report](http://sero.co.u
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Level 0</td>
+<td>Level 0 use records contain where and when the loan was made and the item borrowed.</td>
+<td>Level 0 use data can be used to indicate popular loan items in the participating library.</td>
+</tr>
+<tr>
+<td>Level 1</td>
+<td>Level 1 records are as for level 0, but also with borrower context information, indicating borrower type (staff or student), and course and progression level (for students).</td>
+<td>Level 1 use data can be used to see, via facets, for a given search, what was borrowed in one or more of: a particular institution, a particular course, a particular progression level (or by staff), and in a particular academic year.</td>
+</tr>
+<tr>
+<td>Level 2</td>
+<td>Level 2 records are as for level 0, but also with an anonymised user ID</td>
+<td>Level 2 use data enables recommendations like borrowers of this item also borrowed, and borrowers of this item previously borrowed/went on to borrow.</td>
+</tr>
 </tbody>
 </table>
-
-Level 0	Level 0 use records contain where and when the loan was made and 
-the item borrowed.	Level 0 use data can be used to indicate popular 
-loan items in the participating library.
-Level 1	Level 1 records are as for level 0, but also with borrower context 
-information, indicating borrower type (staff or student), and course and 
-progression level (for students).	Level 1 use data can be used to 
-see, via facets, for a given search, what was borrowed in one or more of: 
-a particular institution, a particular course, a particular progression 
-level (or by staff), and in a particular academic year.
-Level 2	Level 2 records are as for level 0, but also with an anonymised 
-user ID	Level 2 use data enables recommendations like borrowers of this 
-item also borrowed, and borrowers of this item previously borrowed /went 
-on to borrow.
 
 This project would collect use data at Level 0.
 
