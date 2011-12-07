@@ -70,127 +70,99 @@ This project would collect use data at Level 0.
 
 ## Data extraction
 
-Scholars Portal will give template XML files, with instructions, to member 
-libraries, who will pull the necessary data from their systems. Because 
-there are several different ILSes involved, the necessary database or 
-report commands will vary, but once done for one ILS they can be shared 
-with other users of the same system.
+Scholars Portal will give template XML files, with instructions, to member libraries, who will pull the necessary data from their systems. Because there are several different ILSes involved, the necessary database or report commands will vary, but once done for one ILS they can be shared with other users of the same system.
 
 !!! TODO Expand with actual examples
 
 ## Data formats
 
-Following the MOSAIC lead (as described in the README from their script 
-repository), we will collect item file and yearly transaction files from 
-libraries.
+Following the MOSAIC lead (as described in the README from their script repository), we will collect item file and yearly transaction files from libraries.
 
-Item file: items.txt:
+### Item file: items.txt
 
 FIELDS:
 
-   * item ID
-   * ISBN(s)
-   * title
-     author(s)
-     publisher
-     publication year
-     persistent URL
+  item ID
+  ISBN(s)
+  title
+  author(s)
+  publisher
+  publication year
+  persistent URL
 
 SAMPLE:
 
-     123  0415972531  Music & copyright  L. Marshall  Wiley    2004 
-http://libcat.hud.ac.uk/123
-     234  0415969298  Songwriting tips   N. Skilbeck  Phaidon  1997 
-http://libcat.hud.ac.uk/234
-The item ID is whatever ID you want to use to identify a library book. It 
-must match the item ID contained in the item file.
-The ISBN(s) are one (or more) ISBNs, separated by a | pipe character where 
-more than one ISBN is linked to the item (e.g. 0415966744|0415966752).
-The title is the title of the book.
-The author(s) are one (or more) names, separated by a | pipe character 
-where more than one name is present (e.g. John Smith|Julie Johnson).
-The publisher and publication year are the name of the publishing company 
-and the year of publication.
-The persistent URL is the web address the item can be found at (e.g. on 
-your library catalogue).
+123  0415972531  Music & copyright  L. Marshall  Wiley    2004 http://libcat.hud.ac.uk/123
+234  0415969298  Songwriting tips   N. Skilbeck  Phaidon  1997 http://libcat.hud.ac.uk/234
 
-Transaction files: transaction.YYYY.txt
+* The item ID is whatever ID you want to use to identify a library book. It must match the item ID contained in the item file.
+* The ISBN(s) are one (or more) ISBNs, separated by a | pipe character where more than one ISBN is linked to the item (e.g. 0415966744|0415966752).
+* The title is the title of the book.
+* The author(s) are one (or more) names, separated by a | pipe character where more than one name is present (e.g. John Smith|Julie Johnson).
+* The publisher and publication year are the name of the publishing company and the year of publication.
+* The persistent URL is the web address the item can be found at (e.g. on your library catalogue).
+
+### Transaction files: transaction.YYYY.txt
 
 FIELDS:
 
-   * timestamp
-   * item ID
-   * user ID
+  timestamp
+  item ID
+  user ID
 
 SAMPLE:
 
      1222646400    114784    67890
      1225756800    103828    67890
      1225756800    62580     76543
-The timestamp is in Unix time format (i.e. the number of seconds since 1st 
-Jan 1970 UTC). It is used to calculate the day the transaction occurred 
-on.
-The user ID is whatever ID you want to use to identify an individual 
-library user. It will be converted to a MD5 hash value before the data is 
-submitted to MOSAIC. It must match the user ID contained in the user file.
-The item ID is whatever ID you want to use to identify a library book. It 
-must match the item ID contained in the item file.
+
+* The timestamp is in Unix time format (i.e. the number of seconds since 1st Jan 1970 UTC). It is used to calculate the day the transaction occurred on.
+* The user ID is whatever ID you want to use to identify an individual library user. It will be converted to a MD5 hash value before the data is submitted to MOSAIC. It must match the user ID contained in the user file.
+* The item ID is whatever ID you want to use to identify a library book. It must match the item ID contained in the item file.
 
 The basic usage data to be gathered is:
 
- 	Item title
- 	ISBN
- 	Number of copies
- 	URL of item in catalogue
- 	Loan history, giving number of initial circulations per year over 
+  Item title
+  ISBN
+  Number of copies
+  URL of item in catalogue
+  Loan history, giving number of initial circulations per year over 
+  
 the last 10 years (or fewer, if 10 years of data is not available)
 
-The basic also-borrowed data to be gathered for each item (A) is a list of 
-other items (B) that shows:
+The basic also-borrowed data to be gathered for each item (A) is a list of other items (B) that shows:
 
- 	how many times A was borrowed before B
- 	how many times A and B were borrowed together
- 	how many times A was borrowed after B
- 	how many times B was borrowed in total
+* how many times A was borrowed before B
+* how many times A and B were borrowed together
+* how many times A was borrowed after B
+* how many times B was borrowed in total
 
-Scholars Portal will aggregate the data from the different libraries, and 
-make the data openly available.
+Scholars Portal will aggregate the data from the different libraries, and make the data openly available.
 
 # Privacy
 
-No identifying information will be connected to the usage data. It is 
-completely anonymous.
+No identifying information will be connected to the usage data. It is completely anonymous.
 
 ## Data storage
 
-The data will be stored using the same format as Huddersfield used in 
-their data release (see 
-http://library.hud.ac.uk/data/usagedata/_readme.html):
+The data will be stored using the same format as Huddersfield used in their data release (see [http://library.hud.ac.uk/data/usagedata/_readme.html](http://library.hud.ac.uk/data/usagedata/_readme.html)):
 
- 	circulation_data.xml contains aggregate usage information for 
-individual titles
- 	suggestion_data.xml contains people who borrowed X also borrowed Y 
-relations
- 	schools.xml is a lookup file listing OCUL members and ID numbers
- 	courses.xml is a lookup file listing course codes and ID numbers
+* circulation\_data.xml contains aggregate usage information for individual titles
+* suggestion\_data.xml contains people who borrowed X also borrowed Y relations
+* schools.xml is a lookup file listing OCUL members and ID numbers
+* courses.xml is a lookup file listing course codes and ID numbers
 
 !!!! TODO Expand
 
 ## Recommendation Engine
 
-!!! TODO Write up what is known about how this can work, from MOSAIC and 
-what Tim Spalding said
+!!! TODO Write up what is known about how this can work, from MOSAIC and what Tim Spalding said
 
-When the Recommendation Engine is given an ISBN or other ID number it will 
-suggest a list of related items, using an algorithm based on the 
-also-borrowed data and the usage data.
+When the Recommendation Engine is given an ISBN or other ID number it will suggest a list of related items, using an algorithm based on the also-borrowed data and the usage data.
 
-[suggest algorithm? Also use LibraryThing data? We can get it from Tim 
-Spalding.]
+[suggest algorithm? Also use LibraryThing data? We can get it from Tim Spalding.]
 
 # Implementation as a web service
 
-The Recommendation Engine will have web-based API available at Scholars 
-Portal. Ideally a library will be able to insert one line of Javascript 
-into its HTML template to make the recommendations appear.
+The Recommendation Engine will have web-based API available at Scholars Portal. Ideally a library will be able to insert one line of Javascript into its HTML template to make the recommendations appear.
 
