@@ -10,9 +10,9 @@ There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seven
 
 For details, please contact the organizers, William Denton <wdenton@yorku.ca> (Web Librarian, York University) and Cameron Metcalf <cmetcalf@uottawa.ca> (Head, Library Systems Division, University of Ottawa).
 
-# Background
+## Background
 
-This project is based on a British project at JISC called [MOSAIC (Making Our Shared Activity Information Count)](http://sero.co.uk/jisc-mosaic-documents.html). The documents there describe what they did and what we want to do:
+This project is based on a [JISC](http://www.jisc.ac.uk/) project called [MOSAIC (Making Our Shared Activity Information Count)](http://sero.co.uk/jisc-mosaic-documents.html). The documents there describe what they did, and our plan is based on that:
 
 * [MOSAIC Data Collection: A Guide](http://sero.co.uk/assets/090514%20MOSAIC%20data%20collection%20-%20A%20guide%20v01.pdf)
 * [MOSAIC Final Report](http://sero.co.uk/mosaic/100322_MOSAIC_Final_Report_v7_FINAL.pdf) (and [Appendices](http://sero.co.uk/mosaic/100212%20MOSAIC%20Final%20Report%20Appendices%20FINAL.pdf))
@@ -20,11 +20,11 @@ This project is based on a British project at JISC called [MOSAIC (Making Our Sh
 the Recommendation Engine idea, but are worth looking at to see other 
 possible future directions.)
 
-The JISC project grew out of work done by Dave Pattern and others at the University of Huddersfield. They made usage data available under an Open Data Commons License.
+The JISC project grew out of work done by Dave Pattern (Library Systems Manager) and others at the University of Huddersfield. They made usage data available under an Open Data Commons License.
 
 * [Data](http://library.hud.ac.uk/data/usagedata/)
 * [README](http://library.hud.ac.uk/data/usagedata/_readme.html)
-* Dave Pattern, Library Systems Manager at Huddersfield, explains things in [Free book usage data from the University of Huddersfield](http://www.daveyp.com/blog/archives/528)
+* Pattern explains things in [Free book usage data from the University of Huddersfield](http://www.daveyp.com/blog/archives/528)
 
 # Data gathering
 
@@ -141,7 +141,7 @@ Scholars Portal will aggregate the data from the different libraries, and make t
 
 No identifying information will be connected to the usage data. It is completely anonymous.
 
-## Data storage
+# Data storage
 
 The data will be stored using the same format as Huddersfield used in their data release (see [http://library.hud.ac.uk/data/usagedata/_readme.html](http://library.hud.ac.uk/data/usagedata/_readme.html)):
 
@@ -152,7 +152,7 @@ The data will be stored using the same format as Huddersfield used in their data
 
 !!!! TODO Expand
 
-## Recommendation Engine
+# Recommendation Engine
 
 !!! TODO Write up what is known about how this can work, from MOSAIC and what Tim Spalding said
 
