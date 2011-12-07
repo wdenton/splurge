@@ -95,8 +95,8 @@ No identifying information will be connected to the usage data. It is completely
 
 The data will be stored as XML using the same format as Huddersfield used in their data release (see the [usage data README](http://library.hud.ac.uk/data/usagedata/_readme.html)):
 
-* `circulation\_data.xml` contains aggregate usage information for individual titles
-* `suggestion\_data.xml` contains people who borrowed X also borrowed Y relations
+* `circulation_data.xml` contains aggregate usage information for individual titles
+* `suggestion_data.xml` contains people who borrowed X also borrowed Y relations
 
 # Building the recommendation Engine
 
