@@ -1,0 +1,32 @@
+We are writing to invite a couple Systems people, from your institution, to a hackfest mid-February 2012. The Scholars Portal Technical Advisory Group (TAG [http://www.ocul.on.ca/node/112](http://www.ocul.on.ca/node/112)) will be hosting its first hackfest---a full-day event on February 17th---to collaboratively code and share projects with colleagues from other Ontario universities at Ryerson University, downtown Toronto. 
+
+A letter has already been sent to your University Librarian, asking that they consider supporting off-site travel for interested individuals (systems librarians and/or application developers) from your institution.
+
+For those travelling from afar, we ask that you account for a one-night accommodation in Toronto on Thursday, the 16th, when we will be arranging an informal dinner for hackfest participants before embarking on full day comprised of presentations, planning and coding on the 17th.
+
+The main project to be tackled for this event is book recommendation service.  By collecting usage data from OCUL members we want to build a recommendation engine that can be integrated into any member's catalogue.
+
+We plan to make the anonymized data and software available under an open license so that members can assess and understand collection usage in Ontario.  The idea for this project is based on the British MOSAIC (Making Our Shared Activity Information Count) project at JISC (Joint Information Systems Committee): [http://www.sero.co.uk/jisc-mosaic.html](http://www.sero.co.uk/jisc-mosaic.html)
+
+We are looking forward to this opportunity for provincial collaboration to build a practical application that may lead to future partnerships and initiatives. This will be especially beneficial for those staff members who, in the past, might not have had the opportunity to participate in the Access and Code4Lib conferences.
+
+This will be a chance for resource-sharing and exposure to new programming and development tools being used across the province. Participants are sure to establish important contacts while sharing the work being done at our respective institutions.
+
+We hope you're able to join us.
+
+Registration is not yet set up, but will probably be very informal (an email message to one of us).
+
+This is a preliminary message, more details will follow shortly describing the kind of data we are looking for, along with some examples and a basic program for the day, in order to get started on development in February.  We will be making a similar announcement on Scholars Portal Day, Friday, December 9th.
+
+If you have any comments or questions, please feel free to get in touch with William Denton <wdenton@yorku.ca> or Cameron Metcalf <cmetcalf@uottawa.ca>
+
+Cameron Metcalf <cmetcalf@uottawa.ca>
+Chair of the Scholars Portal Technical Advisory Group
+Chef, Département des systèmes | Head, Library Systems Division
+Bibliothèque uOttawa Library    www.biblio.uottawa.ca  (613.562.5800 x 3651)
+
+William Denton <wdenton@yorku.ca>
+Member of the Scholars Portal Technical Advisory Group
+Web Librarian, York University http://www.library.yorku.ca/
+S237V SSB, 4700 Keele St., York University, Toronto ON, Canada M3J 1P3
++1 416-736-2100 x20006
