@@ -85,7 +85,47 @@ We will use two of the kinds of data files described in the [MOSAIC data file fo
 
 Because we are working at Level 0 and not connecting users and courses, we don't need `users.YYYY.txt` or `courses.txt`.
 
-Then we can use [data2xml.pl](http://library.hud.ac.uk/data/MOSAIC/scripts/data2xml.txt) (or a variation) to convert the library-generated data into richer XML that we will use for the work, as describe in the [usage data README](http://library.hud.ac.uk/data/usagedata/_readme.html) from their [script repository](http://library.hud.ac.uk/data/usagedata/)).
+### items.txt
+
+Fields:
+
+    item ID    (mandatory)
+    ISBN(s)    (mandatory)
+    title      (mandatory)
+    author(s)
+    publisher
+    publication year
+    persistent URL
+
+Sample:
+
+    123 → 0415972531 → Music & copyright → L. Marshall → Wiley   → 2004 → http://libcat.hud.ac.uk/123
+    234 → 0415969298 → Songwriting tips  → N. Skilbeck → Phaidon → 1997 → http://libcat.hud.ac.uk/234
+
+* The item ID is whatever ID you want to use to identify a library book. It must match the item ID contained in the item file.
+* The ISBN(s) are one (or more) ISBNs, separated by a | pipe character where more than one ISBN is linked to the item (e.g. 0415966744|0415966752).
+* The title is the title of the book.
+* The author(s) are one (or more) names, separated by a | pipe character where more than one name is present (e.g. John Smith|Julie Johnson).
+* The publisher and publication year are the name of the publishing company and the year of publication.
+* The persistent URL is the web address the item can be found at (e.g. on your library catalogue). 
+
+### transactions.YYYY.txt
+
+Fields:
+
+    timestamp (mandatory)
+    item ID   (mandatory)
+    user ID   (mandatory)
+
+Sample:
+
+    1222646400  →  114784  →  67890
+    1225756800  →  103828  →  67890
+    1225756800  →  62580   →  76543
+
+* The timestamp is in Unix time format (i.e. the number of seconds since 1st Jan 1970 UTC). It is used to calculate the day the transaction occurred on.
+* The user ID is whatever ID you want to use to identify an individual library user. It will be converted to a MD5 hash value before the data is submitted to MOSAIC. It must match the user ID contained in the user file.
+* The item ID is whatever ID you want to use to identify a library book. It must match the item ID contained in the item file. 
 
 # Data storage
 
@@ -93,6 +133,9 @@ The data will be stored as XML using the same format as Huddersfield used in the
 
 * `circulation_data.xml` contains aggregate usage information for individual titles
 * `suggestion_data.xml` contains people who borrowed X also borrowed Y relations
+
+[data2xml.pl](data2xml.pl) (as taken from MOSAIC's code) will convert the library-generated data into richer XML that we will use for the work, as describe in the [usage data README](http://library.hud.ac.uk/data/usagedata/_readme.html) from their [script repository](http://library.hud.ac.uk/data/usagedata/)).
+
 
 # Building the recommendation Engine
 
