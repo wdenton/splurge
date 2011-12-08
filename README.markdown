@@ -6,11 +6,9 @@ Collect usage data from OCUL members and build a recommendation engine that can 
 
 ## Hackfest on Friday 17 February 2012 at Ryerson University
 
-There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seventh floor of Heaslip House at Ryerson University in Toronto.  It is open to anyone in an [OCUL](http://www.ocul.on.ca/) library.  No breakfast or lunch will be provided, but there are many coffee shops, restaurants and pubs nearby.
+There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seventh floor of Heaslip House at Ryerson University in Toronto.  It is open to anyone in an [OCUL](http://www.ocul.on.ca/) library.  No breakfast or lunch will be provided, but there are many coffee shops, restaurants and pubs nearby. The night before the hackfest there will be a dinner in Toronto for everyone in town.
 
 __Everyone coming to the hackfest should bring at least six months of usage data from their library.__ See Data Collection below for more details.
-
-The night before the hackfest there will be a dinner in Toronto for everyone in town.
 
 For details, please contact the organizers, William Denton <wdenton@yorku.ca> (Web Librarian, York University) and Cameron Metcalf <cmetcalf@uottawa.ca> (Head, Library Systems Division, University of Ottawa).
 
@@ -78,7 +76,7 @@ We would collect use data at Level 0.
 
 ## Data collection
 
-To build SPLURGE, and to work on it at the hackfest, we need some good sample data. __Everyone coming should bring at least six months of usage data from their library.__
+To build SPLURGE, and to work on it at the hackfest, we need some good sample data. __Everyone coming should bring at least six months of usage data from their library.__  We can store the data on Scholars Portal servers (location to be determined).
 
 We need to make it as easy as possible for people to pull the data from their systems. Because there are several different ILSes used across the province, the necessary database or report commands will vary, but once done for one ILS they can be shared with other users of the same system. MOSAIC's [existing code for SirsiDynix Horizon](http://library.hud.ac.uk/wikis/mosaic/index.php/Code_for_SirsiDynix_Horizon) may be useful.  Any code written can be added to this repository.
 
@@ -140,7 +138,6 @@ The data will be stored as XML using the same format as Huddersfield used in the
 
 [data2xml.pl](data2xml.pl) (as taken from MOSAIC's code) will convert the library-generated data into richer XML that we will use for the work, as describe in the [usage data README](http://library.hud.ac.uk/data/usagedata/_readme.html) from their [script repository](http://library.hud.ac.uk/data/usagedata/)).
 
-
 # Building the recommendation Engine
 
 The purpose of the hackfest is to build the code to make the recommendation engine work. When the Recommendation Engine is given an ISBN or other ID number it will suggest a list of related items.
@@ -149,12 +146,14 @@ Pattern's [Sliding Down the Long Tail](http://www.daveyp.com/blog/archives/1453)
 
 Tim Spalding implemented a similar feature at [LibraryThing](http://librarything.com/). When asked on Twitter how it worked, he said [The best code is just statistics](https://mobile.twitter.com/librarythingtim/status/126478695828434944) and [Given random distribution how many of book X would you expect? How many did you find?](https://mobile.twitter.com/librarythingtim/status/126480811817046016).
 
-# Implementation as a web service
+## Implementation as a web service
 
 The Recommendation Engine will have web-based API available at Scholars Portal. Ideally a library will be able to insert one line of Javascript into its HTML template to make the recommendations appear.
 
-# Privacy
+# Open data and anonymity
 
-No identifying information will be connected to the usage data. It is completely anonymous.
+All of the anonymized data will be made freely available under an open license. 
+
+No identifying information will be connected to the usage data. It will be completely anonymous.
 
 
