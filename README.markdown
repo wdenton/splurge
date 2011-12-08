@@ -69,7 +69,7 @@ MOSAIC set out three levels of usage data in the [Final Report](http://sero.co.u
 <tr>
 <td>Level 2</td>
 <td>Level 2 records are as for level 0, but also with an anonymised user ID</td>
-<td>Level 2 use data enables recommendations like borrowers of this item also borrowed, and borrowers of this item previously borrowed/went on to borrow.</td>
+<td>Level 2 use data enables recommendations like "borrowers of this item also borrowed," and "borrowers of this item previously borrowed/went on to borrow."</td>
 </tr>
 </tbody>
 </table>
