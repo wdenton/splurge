@@ -6,7 +6,9 @@ Collect usage data from OCUL members and build a recommendation engine that can 
 
 ## Hackfest on Friday 17 February 2012 at Ryerson University
 
-There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seventh floor of Heaslip House at Ryerson University in Toronto.  It is open to anyone in an [OCUL](http://www.ocul.on.ca/) library.  Anyone who's in Toronto the evening before is welcome to come for dinner at a pub.  At the hackfest no breakfast or lunch will be provided, but there are many coffee shops, restaurants and pubs nearby.
+There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seventh floor of Heaslip House at Ryerson University in Toronto.  It is open to anyone in an [OCUL](http://www.ocul.on.ca/) library.  No breakfast or lunch will be provided, but there are many coffee shops, restaurants and pubs nearby.
+
+The night before the hackfest there will be a dinner in Toronto for everyone in town.
 
 For details, please contact the organizers, William Denton <wdenton@yorku.ca> (Web Librarian, York University) and Cameron Metcalf <cmetcalf@uottawa.ca> (Head, Library Systems Division, University of Ottawa).
 
