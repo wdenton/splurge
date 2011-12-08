@@ -1,8 +1,10 @@
 # SPLURGE: Scholars Portal Library Usage-based Recommendation Engine
 
-## Goal
+Amazon.ca has a "customers who bought this item also bought" feature that recommends things to you that you might be interested in.  LibraryThing has it too: the recommendations for [What's Bred in the Bone](https://www.librarything.com/work/4872560) by Robertson Davies include books by Margaret Laurence, Carol Shields, Michael Ondaatje, Peter Ackroyd, John Fowles, and David Lodge, as well as other Davies works.
 
-Collect usage data from OCUL members and build a recommendation engine that can be integrated into any members catalogue. Make the anonymized data available under an open license so members and others can better assess and understand collection usage in Ontario, and make the software available under the GNU Public License so anyone can use it.
+Library catalogues don't have any such feature, but they should. And libraries are sitting on the circulation and usage data that makes it possible.
+
+SPLURGE will collect usage data from OCUL members and build a recommendation engine that can be integrated into any member's catalogue.  The code will be made available under the GNU Public License and the data will be made available under an open data license.
 
 ## Hackfest on Friday 17 February 2012 at Ryerson University
 
@@ -138,17 +140,23 @@ The data will be stored as XML using the same format as Huddersfield used in the
 
 [data2xml.pl](data2xml.pl) (as taken from MOSAIC's code) will convert the library-generated data into richer XML that we will use for the work, as describe in the [usage data README](http://library.hud.ac.uk/data/usagedata/_readme.html) from their [script repository](http://library.hud.ac.uk/data/usagedata/)).
 
-# Building the recommendation Engine
+# Building SPLURGE
 
-The purpose of the hackfest is to build the code to make the recommendation engine work. When the Recommendation Engine is given an ISBN or other ID number it will suggest a list of related items.
+The purpose of the hackfest is to build the code to make the Recommendation Wngine work. When the Recommendation Engine is given an ISBN or other ID number it will suggest a list of related items.
 
 Pattern's [Sliding Down the Long Tail](http://www.daveyp.com/blog/archives/1453) describes the logic we'll need to follow.
 
 Tim Spalding implemented a similar feature at [LibraryThing](http://librarything.com/). When asked on Twitter how it worked, he said [The best code is just statistics](https://mobile.twitter.com/librarythingtim/status/126478695828434944) and [Given random distribution how many of book X would you expect? How many did you find?](https://mobile.twitter.com/librarythingtim/status/126480811817046016).
 
+In conversation, both Pattern and Spalding mentioned the _Harry Potter effect_: some books are so popular with everyone that they need to be damped down.  Everyone reading Freud or Ferlinghetti, Feynman or Foucault, is probably also reading J.K. Rowling, but that doesn't mean _Harry Potter and the Goblet of Fire_ should be recommended to people looking at _Totem and Taboo_ or _Madness and Civilization_.
+
 ## Implementation as a web service
 
 The Recommendation Engine will have web-based API available at Scholars Portal. Ideally a library will be able to insert one line of Javascript into its HTML template to make the recommendations appear.
+
+# Possible future directions
+
+Moving data collection to Level 1 and involving course information.
 
 # Open data and anonymity
 
