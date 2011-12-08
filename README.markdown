@@ -154,6 +154,10 @@ In conversation, both Pattern and Spalding mentioned the _Harry Potter effect_: 
 
 The Recommendation Engine will have web-based API available at Scholars Portal. Ideally a library will be able to insert one line of Javascript into its HTML template to make the recommendations appear.
 
+# Tools that might be useful
+
+* [Apache Mahout](https://mahout.apache.org/)
+
 # Possible future directions
 
 Moving data collection to Level 1 and involving course information.
