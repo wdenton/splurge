@@ -76,9 +76,11 @@ We would collect use data at Level 0.
 
 ## Data collection
 
-We will make it as easy as possible for member libraries to pull the data from their systems. Because there are several different ILSes involved, the necessary database or report commands will vary, but once done for one ILS they can be shared with other users of the same system. MOSAIC's [existing code for SirsiDynix Horizon](http://library.hud.ac.uk/wikis/mosaic/index.php/Code_for_SirsiDynix_Horizon) may be useful.
+To build SPLURGE, and to work on it at the hackfest, we need some good sample data. __Everyone coming should bring at least six months of usage data from their library.__
 
-We will use two of the kinds of data files described in the [MOSAIC data file formats](http://library.hud.ac.uk/data/MOSAIC/scripts/_readme.html):
+We need to make it as easy as possible for people to pull the data from their systems. Because there are several different ILSes used across the province, the necessary database or report commands will vary, but once done for one ILS they can be shared with other users of the same system. MOSAIC's [existing code for SirsiDynix Horizon](http://library.hud.ac.uk/wikis/mosaic/index.php/Code_for_SirsiDynix_Horizon) may be useful.  Any code written can be added to this repository.
+
+We will use two of the data files described in the [MOSAIC data file formats](http://library.hud.ac.uk/data/MOSAIC/scripts/_readme.html):
 
 * `items.txt`
 * `transaction.YYYY.txt`
