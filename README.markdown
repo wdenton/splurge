@@ -12,7 +12,7 @@ There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seven
 
 __Everyone coming to the hackfest should bring at least six months of usage data from their library.__ See Data Collection below for more details.
 
-For details, please contact the organizers, William Denton <wdenton@yorku.ca> (Web Librarian, York University) and Cameron Metcalf <cmetcalf@uottawa.ca> (Head, Library Systems Division, University of Ottawa).
+For details, please contact the organizers, [William Denton](http://www.miskatonic.org/) (<wdenton@yorku.ca> and [@wdenton](http://twitter.com/wdenton)) (Web Librarian, York University) and Cameron Metcalf (<cmetcalf@uottawa.ca> and [@podeas](http://twitter.com/podeas)) (Head, Library Systems Division, University of Ottawa).
 
 ## Background
 
