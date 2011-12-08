@@ -2,7 +2,7 @@
 
 Amazon.ca has a "customers who bought this item also bought" feature that recommends things to you that you might be interested in.  LibraryThing has it too: the recommendations for [What's Bred in the Bone](https://www.librarything.com/work/4872560) by Robertson Davies include books by Margaret Laurence, Carol Shields, Michael Ondaatje, Peter Ackroyd, John Fowles, and David Lodge, as well as other Davies works.
 
-Library catalogues don't have any such feature, but they should. And libraries are sitting on the circulation and usage data that makes it possible.
+Library catalogues don't have any such feature, but they should. And libraries are sitting on the circulation and usage data that makes it possible.  ([BiblioCommons](http://www.bibliocommons.com/) does have a Similar Titles feature, but it's a closed commercial product aimed at public libraries, and anyway the titles are added by hand.)
 
 SPLURGE will collect usage data from OCUL members and build a recommendation engine that can be integrated into any member's catalogue.  The code will be made available under the GNU Public License and the data will be made available under an open data license.
 
