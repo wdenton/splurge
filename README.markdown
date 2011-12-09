@@ -154,9 +154,10 @@ In conversation, both Pattern and Spalding mentioned the _Harry Potter effect_: 
 
 The Recommendation Engine will have web-based API available at Scholars Portal. Ideally a library will be able to insert one line of Javascript into its HTML template to make the recommendations appear.
 
-# Tools that might be useful
+# Systems and tools that might be useful
 
 * [Apache Mahout](https://mahout.apache.org/)
+* [Melvyl Recommender Project](http://www.cdlib.org/services/publishing/tools/xtf/melvyl_recommender/index.html) at California Digital Library
 
 # Possible future directions
 
