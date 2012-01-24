@@ -12,6 +12,8 @@ There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seven
 
 __Everyone coming to the hackfest should bring at least six months of usage data from their library.__ See Data Collection below for more details.
 
+Guest wifi accounts will be available, but if your university is part of the [eduroam](http://www.canarie.ca/en/caf/members) network then you can use it.  Please make any necessary arrangements in advance.
+
 For details, please contact the organizers, [William Denton](http://www.miskatonic.org/) (<wdenton@yorku.ca> and [@wdenton](http://twitter.com/wdenton)) (Web Librarian, York University) and Cameron Metcalf (<cmetcalf@uottawa.ca> and [@podeas](http://twitter.com/podeas)) (Head, Library Systems Division, University of Ottawa).
 
 ## Background
