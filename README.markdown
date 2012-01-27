@@ -161,6 +161,10 @@ The Recommendation Engine will have web-based API available at Scholars Portal. 
 * [Apache Mahout](https://mahout.apache.org/)
 * [Melvyl Recommender Project](http://www.cdlib.org/services/publishing/tools/xtf/melvyl_recommender/index.html) at California Digital Library
 
+# Related reading
+
+* ["Readers who borrowed this also borrowed...": Recommender Systems in UK libraries](http://www.emeraldinsight.com/journals.htm?issn=0737-8831&volume=30&issue=1&articleid=17014513&show=abstract), by Simon Wakeling, Paul Clough, Barbara Sen and Lynn Connaway (_Library Hi Tech_ 30:1)
+
 # Possible future directions
 
 Moving data collection to Level 1 and involving course information.
