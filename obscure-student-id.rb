@@ -3,6 +3,8 @@
 # Given a transactions file, run the student ID number
 # through the MD5 one-way hash to make it anonymous.
 #
+# Usage: ./obscure-student-id.rb transactions.raw.txt > transactions.txt
+#
 # Input:
 # 10	12	45
 # 11	12	53
