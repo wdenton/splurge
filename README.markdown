@@ -8,7 +8,7 @@ SPLURGE will collect usage data from OCUL members and build a recommendation eng
 
 ## Hackfest on Friday 17 February 2012 at Ryerson University
 
-There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seventh floor of Heaslip House at Ryerson University in Toronto.  It is open to anyone in an [OCUL](http://www.ocul.on.ca/) library.  No breakfast or lunch will be provided, but there are many coffee shops, restaurants and pubs nearby. The night before the hackfest there will be a dinner in Toronto for everyone in town.
+There will be a one-day SPLURGE hackfest on Friday 17 February 2012 on the seventh floor of Heaslip House at Ryerson University in Toronto.  It is open to anyone in an [OCUL](http://www.ocul.on.ca/) library.  No breakfast or lunch will be provided, but there are many coffee shops, restaurants and pubs nearby. The night before the hackfest there will be a dinner in Toronto at a pub.  (Email for details.)
 
 __Everyone coming to the hackfest should bring at least six months of usage data from their library.__ See Data Collection below for more details.
 
@@ -33,8 +33,13 @@ The JISC project grew out of work done by Dave Pattern (Library Systems Manager)
 * [Data](http://library.hud.ac.uk/data/usagedata/)
 * [README](http://library.hud.ac.uk/data/usagedata/_readme.html)
 * Pattern explains things in [Free book usage data from the University of Huddersfield](http://www.daveyp.com/blog/archives/528)
+* Pattern summarized it all in March 2011 in [Sliding Down the Long Tail](http://www.daveyp.com/blog/archives/1453).
 
-In March 2011 Dave Pattern's summarized it all in [Sliding Down the Long Tail](http://www.daveyp.com/blog/archives/1453).
+Updated 13 Feb: The SALT Recommender API is doing what we want to do, and JISC's planned SALT 2 project is a consortial approach like OCUL would do:
+
+* [SALT Recommender API at Manchester](https://salt11.wordpress.com/salt-recommender-api/)
+* [Copac Activity Data Project aka SALT 2](http://copac.ac.uk/innovations/activity-data/)
+* [JISC's Activity Data](http://www.activitydata.org/)
 
 # Data gathering
 
@@ -93,7 +98,7 @@ Because we are working at Level 0 and not connecting users and courses, we don't
 
 ### items.txt
 
-Fields:
+Tab-delimited file. Fields:
 
     item ID    (mandatory)
     ISBN(s)    (mandatory)
@@ -117,7 +122,7 @@ Sample:
 
 ### transactions.YYYY.txt
 
-Fields:
+Tab-delimited file. Fields:
 
     timestamp (mandatory)
     item ID   (mandatory)
@@ -130,7 +135,7 @@ Sample:
     1225756800  →  62580   →  76543
 
 * The timestamp is in Unix time format (i.e. the number of seconds since 1st Jan 1970 UTC). It is used to calculate the day the transaction occurred on.
-* The user ID is whatever ID you want to use to identify an individual library user. It will be converted to a MD5 hash value before the data is submitted to MOSAIC. It must match the user ID contained in the user file.
+* The user ID is whatever ID you want to use to identify an individual library user. It will be converted to a MD5 hash value before the data is submitted. It must match the user ID contained in the user file.
 * The item ID is whatever ID you want to use to identify a library book. It must match the item ID contained in the item file. 
 
 # Data storage
